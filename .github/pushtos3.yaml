@@ -1,4 +1,4 @@
-name: Push something to S3
+name: Push something to S3 if we can
 
 on:
   push:
