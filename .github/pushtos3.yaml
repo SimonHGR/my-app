@@ -22,6 +22,7 @@ jobs:
 
       - name: Zip Stuff
         run: |
+          echo "About to start s3 process. Zipping first."
           pwd
           zip -r myzip.zip .
           # cd aws
@@ -36,6 +37,7 @@ jobs:
 
       - name: Upload zip file to S3
         run: |
+          echo "about to try s3 copy"
           aws s3 cp ./myzip.zip s3://oi23mafops/my.zip
 
       # - name: Update Lambda function
