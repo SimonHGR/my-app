@@ -35,9 +35,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-west-2
 
-      - name: Upload zip file to S3
+      - name: Upload zip file to S3 bucket
         run: |
           echo "about to try s3 copy"
+          echo access ${{ secrets.AWS_ACCESS_KEY }}
+          echo secret ${{ secrets.AWS_SECRET_KEY }}
           aws s3 cp ./myzip.zip s3://oi23mafops/my.zip
 
       # - name: Update Lambda function
