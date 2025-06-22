@@ -28,6 +28,7 @@ jobs:
           # cd aws
           # zip -r function.zip .
 
+
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v4
         with:
